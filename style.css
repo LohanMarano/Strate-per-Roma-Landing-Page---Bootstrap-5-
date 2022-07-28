@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('http://fonts.cdnfonts.com/css/jsl-ancient');
+
+
+/* GENERAL */
+
+html {
+    height: 100%;
+}
+
+* {
+    font-family: 'Italiana', serif;
+}
+
+*:focus {
+    box-shadow: none !important;
+  }
+
+body {
+    display: grid;
+    min-height: 100%;
+    grid-template-rows: auto 1fr auto;
+  }
+
+/* TOP */
+
+header {
+    background-color: #D6AD60;
+}
+
+.socialbox, i {
+    color: #695F4E;
+}
+
+i:hover {
+    color: #3d5f37;
+}
+
+.cta-nav {
+    font-weight: 600;
+}
+
+.menu {
+    background-color: #D6AD60;
+    font-weight: 600;
+    font-size: large;
+    border-top-style: solid;
+    border-color: #695f4e4d;
+    border-width: 1px;
+}
+
+.menu:focus {
+    height: 100vh;
+}
+
+.nav-item {
+    margin-left: 13px;
+    text-align: center;
+}
+
+/* MIDDLE */
+
+main {
+    position: relative;
+    min-height: 64vh;
+    overflow: hidden;
+    color: rgb(214, 214, 214);
+}
+
+.overlay {
+    position: absolute;
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.74), transparent);
+    width: 50%;
+    height: 150vh;
+    z-index: 2;
+}
+
+video {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    z-index: -100;
+
+}
+
+.caption {
+    margin-top: 2rem;
+    position: relative;
+    width: 60vw;
+    top: 23%;
+    text-shadow: .1rem .1rem .8rem black;
+    z-index: 3;
+}
+
+.caption h1 {
+    text-align: justify !important;
+    font-weight: 700;
+    font-size: 600%;
+    text-align: start;
+}
+
+.caption p {
+    text-align: justify !important;
+    font-weight: 600;
+    text-align: start;
+    color: white;
+}
+
+.caption a {
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg,#3d5f37, #b48327, #b48327, #095c20);
+    background-size: 250%;
+    cursor: pointer;
+    transition: 1s background-position ease-in-out;
+}
+
+.caption a:hover {
+    color:white!important;
+    background-position: right;
+}
+
+/* BOTTOM */
+
+footer {
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #3d5f37;
+    z-index: 3;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width:1200px) {
+    video {
+        height: 180%;
+    }
+}
+
+
+@media (max-width: 920px) {
+   video {
+    height: 200%;
+   }
+}
+
+@media (max-width: 720px) {
+    main {
+        background: url('videoposter.jpg');
+        background-size: 730%;
+    }
+
+    video {
+        display: none;
+    }
+
+    .caption h1 {
+        font-size: 400%;
+    }
+}
+
+@media (max-width: 720px), (min-width: 576px) {
+    main {
+        background-size: 380%;
+    }
+}
+
+@media (max-width:576px) {
+    main {
+        background-size: 450%;
+    }
+
+    .caption h1 {
+        font-size: 320%;
+    }
+}
+
+@media (max-width: 420px) {
+    main {
+        background-size: 700%;
+    }
+}
+
+@media (max-width: 320px) {
+    main {
+        background-size: 800%;
+    }
+
+    .caption h1 {
+        font-size: 250%;
+    }
+}
